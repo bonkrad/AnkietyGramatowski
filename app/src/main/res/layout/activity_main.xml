@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="pl.radekbonk.ankietygramatowski.MainActivity"
+    tools:layout_editor_absoluteY="89dp"
+    tools:layout_editor_absoluteX="0dp">
+
+
+    <Button
+        android:id="@+id/skodaElblagButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/skoda_logo"
+        android:text="Elbląg"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/citroenElblagButton"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <Button
+        android:id="@+id/skodaStarogardButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/skoda_logo"
+        android:text="Starogard"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/kiaStarogardButton"
+        app:layout_constraintLeft_toRightOf="@+id/citroenElblagButton"/>
+
+    <Button
+        android:id="@+id/kiaStarogardButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/kia_logo"
+        android:text="Starogard"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/testButton"
+        app:layout_constraintLeft_toRightOf="@+id/skodaStarogardButton"/>
+
+    <Button
+        android:id="@+id/testButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="TEST"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/kiaStarogardButton"
+        />
+
+    <Button
+        android:id="@+id/citroenElblagButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/citroen_logo"
+        android:text="Elbląg"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/skodaElblagButton"
+        app:layout_constraintRight_toLeftOf="@+id/skodaStarogardButton"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

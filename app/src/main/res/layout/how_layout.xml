@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="pl.radekbonk.ankietygramatowski.HowActivity"
+    tools:layout_editor_absoluteY="89dp"
+    tools:layout_editor_absoluteX="0dp">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Skąd się o nas dowiedziałeś ?"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/googleButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableBottom="@drawable/google_icon"
+        android:text="Google"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/facebookButton"
+        app:layout_constraintTop_toTopOf="@+id/facebookButton"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"/>
+
+    <Button
+        android:id="@+id/facebookButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:drawableBottom="@drawable/facebook_icon"
+        android:text="Facebook"
+        app:layout_constraintLeft_toRightOf="@+id/googleButton"
+        app:layout_constraintRight_toLeftOf="@+id/webButton"
+        app:layout_constraintTop_toTopOf="@+id/webButton"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"/>
+
+    <Button
+        android:id="@+id/webButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:drawableBottom="@drawable/web_icon"
+        android:text="Lokalny Portal"
+        app:layout_constraintLeft_toRightOf="@+id/facebookButton"
+        app:layout_constraintRight_toLeftOf="@+id/bannerButton"
+        app:layout_constraintTop_toTopOf="@+id/bannerButton"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"/>
+
+    <Button
+        android:id="@+id/bannerButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:drawableBottom="@drawable/banner_icon"
+        android:text="Baner"
+        app:layout_constraintLeft_toRightOf="@+id/webButton"
+        app:layout_constraintRight_toLeftOf="@+id/standButton"
+        app:layout_constraintTop_toTopOf="@+id/standButton"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"/>
+
+    <Button
+        android:id="@+id/standButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:drawableBottom="@drawable/stand_icon"
+        android:text="Stoisko"
+        app:layout_constraintLeft_toRightOf="@+id/bannerButton"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"/>
+
+    <Button
+        android:id="@+id/radioButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:drawableBottom="@drawable/radio_icon"
+        android:text="Radio"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/clientButton"
+        app:layout_constraintTop_toTopOf="@+id/clientButton"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="0dp"/>
+
+    <Button
+        android:id="@+id/clientButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:drawableBottom="@drawable/client_icon"
+        android:text="Stały klient"
+        app:layout_constraintLeft_toRightOf="@+id/radioButton"
+        app:layout_constraintRight_toLeftOf="@+id/driveByButton"
+        app:layout_constraintTop_toTopOf="@+id/driveByButton"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"/>
+
+    <Button
+        android:id="@+id/driveByButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:drawableBottom="@drawable/driveby_icon"
+        android:text="Przejazdem"
+        app:layout_constraintLeft_toRightOf="@+id/clientButton"
+        app:layout_constraintRight_toLeftOf="@+id/fromFriendButton"
+        app:layout_constraintTop_toTopOf="@+id/fromFriendButton"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"/>
+
+    <Button
+        android:id="@+id/fromFriendButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:drawableBottom="@drawable/friend_icon"
+        android:text="Z polecenia"
+        app:layout_constraintLeft_toRightOf="@+id/driveByButton"
+        app:layout_constraintRight_toLeftOf="@+id/otherButton"
+        app:layout_constraintTop_toTopOf="@+id/otherButton"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"/>
+
+    <Button
+        android:id="@+id/otherButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:autoText="false"
+        android:drawableBottom="@drawable/other_icon"
+        android:text="Inne"
+        app:layout_constraintLeft_toRightOf="@+id/fromFriendButton"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        android:layout_marginTop="16dp"/>
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline"
+        app:layout_constraintGuide_percent="0.5"
+        android:orientation="horizontal"
+        />
+
+</android.support.constraint.ConstraintLayout>

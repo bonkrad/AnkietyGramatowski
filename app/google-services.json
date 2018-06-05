@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1041015399289",
+    "firebase_url": "https://ankietygramatowski.firebaseio.com",
+    "project_id": "ankietygramatowski",
+    "storage_bucket": "ankietygramatowski.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1041015399289:android:5e52d55d4a2803f7",
+        "android_client_info": {
+          "package_name": "pl.radekbonk.ankietygramatowski"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1041015399289-cg66h8a3hv4kddg8epc88b8b7vt4stmc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "pl.radekbonk.ankietygramatowski",
+            "certificate_hash": "46d6791f3df3b05ec7d2bd23546dfcee98c54640"
+          }
+        },
+        {
+          "client_id": "1041015399289-9mjgok7uh180u4kkqf7l88han1u2vgv3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgw1gFeECeV8zhLf_a6dsPVP5KRmq7W5k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1041015399289-9mjgok7uh180u4kkqf7l88han1u2vgv3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
