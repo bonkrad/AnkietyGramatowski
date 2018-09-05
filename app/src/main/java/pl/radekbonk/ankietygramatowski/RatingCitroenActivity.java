@@ -22,7 +22,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 
-public class RatingActivity extends AppCompatActivity implements View.OnClickListener {
+public class RatingCitroenActivity extends AppCompatActivity implements View.OnClickListener {
     public SharedPreferences sharedPreferences;
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReference;
@@ -63,7 +63,7 @@ public class RatingActivity extends AppCompatActivity implements View.OnClickLis
                 | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.rating_layout);
+        setContentView(R.layout.rating_layout_citroen);
 
         Locale locale = new Locale("polish", "poland");
 
@@ -84,17 +84,12 @@ public class RatingActivity extends AppCompatActivity implements View.OnClickLis
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference(localization + "/" + year + "/" + month);
 
-        Button star1 = (Button) findViewById(R.id.star1);
-        star1.setOnClickListener(this);
-        Button star2 = (Button) findViewById(R.id.star2);
-        star2.setOnClickListener(this);
-        Button star3 = (Button) findViewById(R.id.star3);
-        star3.setOnClickListener(this);
-        Button star4 = (Button) findViewById(R.id.star4);
-        star4.setOnClickListener(this);
-        Button star5 = (Button) findViewById(R.id.star5);
-        star5.setOnClickListener(this);
-
+        Button bad = (Button) findViewById(R.id.bad);
+        bad.setOnClickListener(this);
+        Button neutral = (Button) findViewById(R.id.neutral);
+        neutral.setOnClickListener(this);
+        Button good = (Button) findViewById(R.id.good);
+        good.setOnClickListener(this);
 
         answer = new Answer(localization, how, "0", 0, time);
 
@@ -107,7 +102,7 @@ public class RatingActivity extends AppCompatActivity implements View.OnClickLis
             @Override
             public void onFinish() {
                 databaseReference.push().setValue(answer);
-                Intent intent = new Intent(RatingActivity.this, HowActivity.class);
+                Intent intent = new Intent(RatingCitroenActivity.this, HowActivity.class);
                 intent.putExtra("localization", localization);
                 startActivity(intent);
             }
@@ -119,19 +114,13 @@ public class RatingActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.star1:
+            case R.id.bad:
                 rating = 1;
                 break;
-            case R.id.star2:
-                rating = 2;
-                break;
-            case R.id.star3:
+            case R.id.neutral:
                 rating = 3;
                 break;
-            case R.id.star4:
-                rating = 4;
-                break;
-            case R.id.star5:
+            case R.id.good:
                 rating = 5;
                 break;
         }
@@ -176,7 +165,7 @@ public class RatingActivity extends AppCompatActivity implements View.OnClickLis
     }
 
     public void showDialog(String message) {
-        final AlertDialog alertDialog = new AlertDialog.Builder(RatingActivity.this)
+        final AlertDialog alertDialog = new AlertDialog.Builder(RatingCitroenActivity.this)
                 .setTitle("Dziękujemy")
                 .setMessage(message)
                 .setCancelable(false)
@@ -193,7 +182,7 @@ public class RatingActivity extends AppCompatActivity implements View.OnClickLis
             @Override
             public void onFinish() {
                 alertDialog.dismiss();
-                Intent intent = new Intent(RatingActivity.this, HowActivity.class);
+                Intent intent = new Intent(RatingCitroenActivity.this, HowActivity.class);
                 intent.putExtra("localization", localization);
                 startActivity(intent);
             }
@@ -252,7 +241,7 @@ public class RatingActivity extends AppCompatActivity implements View.OnClickLis
                 email = dataSnapshot.getValue(String.class);
                 Log.i("email", email);
                 try {
-                    MailSender sender1 = new MailSender(RatingActivity.this, email, "Negatywna Opinia: " + miejsce + "!", "Właśnie nadeszła negatywna opinia \nOd: " + kto + "\nCzas: " + time + "\nSatysfakcja: " + rating);
+                    MailSender sender1 = new MailSender(RatingCitroenActivity.this, email, "Negatywna Opinia: " + miejsce + "!", "Właśnie nadeszła negatywna opinia \nOd: " + kto + "\nCzas: " + time + "\nSatysfakcja: " + rating);
                     sender1.execute();
                 } catch (Exception e) {
                     Log.e("SendMail", e.getMessage(), e);
@@ -270,7 +259,7 @@ public class RatingActivity extends AppCompatActivity implements View.OnClickLis
                 email2 = dataSnapshot.getValue(String.class);
                 Log.i("email", email2);
                 try {
-                    MailSender sender2 = new MailSender(RatingActivity.this, email2, "Negatywna Opinia: " + miejsce + "!", "Właśnie nadeszła negatywna opinia \nOd: " + kto + "\nCzas: " + time + "\nSatysfakcja: " + rating);
+                    MailSender sender2 = new MailSender(RatingCitroenActivity.this, email2, "Negatywna Opinia: " + miejsce + "!", "Właśnie nadeszła negatywna opinia \nOd: " + kto + "\nCzas: " + time + "\nSatysfakcja: " + rating);
                     sender2.execute();
                 } catch (Exception e) {
                     Log.e("SendMail", e.getMessage(), e);

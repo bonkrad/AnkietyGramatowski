@@ -111,11 +111,19 @@ public class WhatActivity extends AppCompatActivity implements View.OnClickListe
                 break;
         }
         countDownTimer.cancel();
-        Intent intent = new Intent(WhatActivity.this, RatingActivity.class);
-        intent.putExtra("localization",localization);
-        intent.putExtra("how",how);
-        intent.putExtra("what",what);
-        startActivity(intent);
+        if(localization.equals("citroenElblag") || localization.equals("kiaStarogard")) {
+            Intent intent = new Intent(WhatActivity.this, RatingCitroenActivity.class);
+            intent.putExtra("localization", localization);
+            intent.putExtra("how", how);
+            intent.putExtra("what", what);
+            startActivity(intent);
+        } else {
+            Intent intent = new Intent(WhatActivity.this, RatingActivity.class);
+            intent.putExtra("localization", localization);
+            intent.putExtra("how", how);
+            intent.putExtra("what", what);
+            startActivity(intent);
+        }
     }
 
     @Override
